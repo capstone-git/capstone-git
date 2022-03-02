@@ -4,19 +4,19 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.annotations.Parameters;
 import ui.objects.UserForm;
 import ui.pages.extra.Home;
 import ui.pages.login.Signup;
-import ui.tests.BaseTest;
 
-public class LoginSteps extends BaseTest {
+public class LoginSteps {
 
     private UserForm user;
 
-    @Given("User is {string}")
-    public void userIs(String arg0) {
-        user = new UserForm(1);
+    private static int INCREMENT = 0;
+
+    @Given("User data initialised")
+    public void userDataInitialised() {
+        user = new UserForm(++INCREMENT);
     }
 
     @And("User is on Home page")
@@ -34,9 +34,9 @@ public class LoginSteps extends BaseTest {
         Signup.typeUserName(user.getUserName());
     }
 
-    @And("User enter password")
-    public void userEnterPassword() {
-        Signup.typePassword(user.getPassword());
+    @And("User enter email")
+    public void userEnterEmail() {
+        Signup.typeEmailAddress(user.getEmail());
     }
 
     @And("User click Signup")
@@ -52,16 +52,6 @@ public class LoginSteps extends BaseTest {
     @And("Select title")
     public void selectTitle() {
         Signup.selectTitle(user.getTitle());
-    }
-
-    @And("User re-enter username")
-    public void userReEnterUsername() {
-        Signup.typeReEnterUsername(user.getUserName());
-    }
-
-    @And("Enter re-enter email")
-    public void enterReEnterEmail() {
-        Signup.typeReEnterEmail(user.getEmail());
     }
 
     @And("Enter password")
