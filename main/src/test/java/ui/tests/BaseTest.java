@@ -11,7 +11,7 @@ import ui.pages.extra.Home;
 import java.time.Duration;
 
 public class BaseTest {
-
+    //System.setProperty("webdriver.chrome.driver", "../main/src/utils/chromedriver.exe");
     WebDriver driver = new ChromeDriver();
     Pages pages = new Pages(driver);
 
