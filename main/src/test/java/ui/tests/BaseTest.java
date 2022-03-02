@@ -2,7 +2,9 @@ package ui.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import ui.objects.Pages;
 import ui.pages.extra.Home;
@@ -11,18 +13,17 @@ import ui.pages.extra.Home;
 import java.time.Duration;
 
 public class BaseTest {
-    //System.setProperty("webdriver.chrome.driver", "../main/src/utils/chromedriver.exe");
     WebDriver driver = new ChromeDriver();
     Pages pages = new Pages(driver);
 
-    @BeforeTest
-    public void setUp(){
+    @BeforeClass
+    public void setUp() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get(Home.BASE_URL);
     }
 
-    @AfterTest
+    @AfterClass
     public void tearDown() {
         driver.quit();
     }

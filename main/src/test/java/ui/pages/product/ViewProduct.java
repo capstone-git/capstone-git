@@ -9,38 +9,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
+import ui.objects.Pages.*;
+import ui.tests.BaseTest;
 
-public class ViewProduct {
+import static ui.objects.Pages.getTitle;
 
-    WebDriver driver;
 
-    @BeforeClass
-    public void testSetup()
-    {
-        System.setProperty("webdriver.chrome.driver", "../main/src/utils/chromedriver.exe");
-        driver=new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+public class ViewProduct extends BaseTest {
+
+//    WebDriver driver;
+
+//1. Parallel testing
+//2. Priority param
+//3. Dependency testing
+    public static final String productTitle = "Automation Exercise";
+
+    public static void verifyProductTitle() {
+        Assert.assertTrue(productTitle.contains(getTitle()));
     }
-
-    @BeforeMethod
-    public void openBrowser()
-    {
-        driver.get("https://automationexercise.com/");
-        System.out.println("We are currently on the following URL" +driver.getCurrentUrl());
-    }
-
-    @Test(description="This method verifies that homepage loads", priority = 1)
-    public void homePageLoads()
-    {
-        String homeTitle = driver.getTitle().toString();
-        Assert.assertEquals(homeTitle,"Automation Exercise");
-    }
-
-    @AfterClass
-    public void afterClass()
-    {
-        driver.quit();
-    }
-
 }
