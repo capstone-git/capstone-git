@@ -9,11 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
-import ui.objects.Pages.*;
+import static ui.objects.Pages.*;
 import ui.tests.BaseTest;
-
-import static ui.objects.Pages.getTitle;
-
 
 public class ViewProduct extends BaseTest {
 
@@ -25,6 +22,6 @@ public class ViewProduct extends BaseTest {
     public static final String productTitle = "Automation Exercise";
 
     public static void verifyProductTitle() {
-        Assert.assertTrue(productTitle.contains(getTitle()));
+        Assert.assertTrue(productTitle.contains(title()));
     }
 }

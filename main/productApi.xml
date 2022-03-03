@@ -1,0 +1,17 @@
+<?xml version = "1.0"encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "Product Module Test Suite" >
+    <test name = "MessageUtil">
+        <groups>
+          <run>
+             <include name = "product_api" />
+          </run>
+       </groups>
+       <classes>
+           <class name = "api.product.ProductSetup" />
+            <class name = "api.product.ProductList" />
+          <class name = "api.product.BrandList" />
+           <class name = "api.product.SearchProduct" />
+       </classes>
+    </test>
+</suite>
