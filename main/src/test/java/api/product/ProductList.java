@@ -16,29 +16,23 @@ import static org.hamcrest.Matchers.*;
 
 public class ProductList {
 
-    @BeforeSuite
-    public static void setup() {
-        // Base URL and URI for all REST API requests
-        RestAssured.baseURI = "https://automationexercise.com/api/productsList";
-    }
-
-    @Test()
+    @Test(groups = "product_api")
     public void getProductList() {
         // Stores get response in res variable
+        System.out.println("Response for getting the list of products :");
         Response res = given().relaxedHTTPSValidation().contentType(ContentType.JSON).
-        when().get().
-        then().statusCode(200).extract().response();
+        when().get("/productsList").
+        then().
+                statusCode(200)
+                .log().body()
+                .extract().response();
 
-        //convert JSON to string
-        JsonPath j = new JsonPath(res.asString());
-        //length of JSON array
-        int s = j.getInt("products.size()");
-
-        // Checks that there are the expectd amount of products
-        Assert.assertEquals(s, 34);
+        // Stores POST response into string and checks if correct response is returned
+        String jsonString = res.asPrettyString();
+        Assert.assertTrue(jsonString.contains("200"));
     }
 
-    @Test()
+    @Test(groups = "product_api")
     public void postProduct() {
         // JSON body that will be passed to POST API
         Map<String, Object> data = new HashMap<>();
@@ -55,8 +49,9 @@ public class ProductList {
         ));
 
         // Gathers response of POST request
+        System.out.println("Response for adding a product to the prodcut list :");
         Response res = given().relaxedHTTPSValidation().contentType(ContentType.JSON).body(data)
-                .when().post()
+                .when().post("/productsList")
                 .then()
                     .statusCode(200)
                     .log().body()
@@ -64,7 +59,7 @@ public class ProductList {
 
         // Stores POST response into string and checks if correct response is returned
         String jsonString = res.asPrettyString();
-        Assert.assertEquals(jsonString.contains("This request method is not supported."), true);
+        Assert.assertTrue(jsonString.contains("This request method is not supported."));
     }
 
 }
