@@ -2,16 +2,14 @@ Feature: New User Signup
   BDD + DDT
 
   Scenario Outline: Signup with valid credentials
-    Given User is "<id>"
+    Given User data initialised
     And User is on Home page
     And User click SignupLogin
     And User enter username
-    And User enter password
+    And User enter email
     And User click Signup
     When User is on Account Information page
     And Select title
-    And User re-enter username
-    And Enter re-enter email
     And Enter password
     And Select DoB
     And Enter first name
@@ -24,7 +22,7 @@ Feature: New User Signup
     And Enter zipcode
     And Enter mobile
     And Click on Create Account button
-    Then I should be on Account page
+    Then User should be on Account page
 
     Examples:
       | id

@@ -1,23 +1,15 @@
-package ui.tests.bdd;
+package ui.tests.bdd.login;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.annotations.Parameters;
-import ui.objects.UserForm;
 import ui.pages.extra.Home;
 import ui.pages.login.Signup;
-import ui.tests.BaseTest;
 
-public class LoginSteps extends BaseTest {
+import static ui.tests.bdd.login.Users_initialisation.user;
 
-    private UserForm user;
-
-    @Given("User is {string}")
-    public void userIs(String arg0) {
-        user = new UserForm(1);
-    }
+public class Register_user_with_valid_credentials {
 
     @And("User is on Home page")
     public void userIsOnHomePage() {
@@ -34,9 +26,9 @@ public class LoginSteps extends BaseTest {
         Signup.typeUserName(user.getUserName());
     }
 
-    @And("User enter password")
-    public void userEnterPassword() {
-        Signup.typePassword(user.getPassword());
+    @And("User enter email")
+    public void userEnterEmail() {
+        Signup.typeEmailAddress(user.getEmail());
     }
 
     @And("User click Signup")
@@ -52,16 +44,6 @@ public class LoginSteps extends BaseTest {
     @And("Select title")
     public void selectTitle() {
         Signup.selectTitle(user.getTitle());
-    }
-
-    @And("User re-enter username")
-    public void userReEnterUsername() {
-        Signup.typeReEnterUsername(user.getUserName());
-    }
-
-    @And("Enter re-enter email")
-    public void enterReEnterEmail() {
-        Signup.typeReEnterEmail(user.getEmail());
     }
 
     @And("Enter password")
@@ -124,7 +106,7 @@ public class LoginSteps extends BaseTest {
         Signup.clickCreateAccount();
     }
 
-    @Then("I should be on Account page")
+    @Then("User should be on Account page")
     public void iShouldBeOnAccountPage() {
         Signup.verifyAccountCreated();
     }

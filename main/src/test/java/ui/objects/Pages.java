@@ -47,7 +47,11 @@ public class Pages {
         new Select(driver.findElement(by)).selectByValue(text);
     }
 
-    public static String getTitle() {
+    public static String text(By by) {
+        return driver.findElement(by).getText();
+    }
+
+    public static String title() {
         return driver.getTitle();
     }
 
