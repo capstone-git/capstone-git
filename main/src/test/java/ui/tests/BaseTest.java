@@ -1,10 +1,10 @@
 package ui.tests;
-import io.cucumber.java.*;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import ui.objects.Pages;
 import ui.pages.extra.Home;
@@ -16,16 +16,15 @@ public class BaseTest {
     Pages pages = new Pages(driver);
 
     @Before
-    @BeforeTest
+    @BeforeTest(groups = {"BaseTest"})
     public void setUp(){
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get(Home.BASE_URL);
     }
 
-
     @After
-    @AfterTest
+    @AfterTest(groups = {"BaseTest"})
     public void tearDown() {
         driver.quit();
     }

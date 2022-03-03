@@ -1,3 +1,4 @@
+@singup
 Feature: New User Signup
   BDD + DDT
 

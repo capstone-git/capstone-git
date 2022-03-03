@@ -1,3 +1,4 @@
+@login
 Feature: Exist user registration
 
   Scenario Outline: Register exist user

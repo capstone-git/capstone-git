@@ -2,10 +2,8 @@ package ui.pages.login;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import ui.pages.extra.Home;
 
 import static ui.objects.Pages.*;
-import static ui.tests.bdd.login.Users_initialisation.user;
 
 
 public class Signup {

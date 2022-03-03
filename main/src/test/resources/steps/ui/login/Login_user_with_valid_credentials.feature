@@ -1,3 +1,4 @@
+@login
 Feature: Exist user login
   BDD + DDT
 

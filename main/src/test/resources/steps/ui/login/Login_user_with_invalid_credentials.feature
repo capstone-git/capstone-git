@@ -1,3 +1,4 @@
+@login
 Feature: Invalid user login
 
   Scenario Outline: Login with invalid credentials

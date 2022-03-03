@@ -1,3 +1,4 @@
+@login
 Feature: Logout user
   BDD + DDT
 

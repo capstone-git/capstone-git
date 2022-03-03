@@ -2,6 +2,7 @@ package ui.pages.login;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import ui.objects.UserForm;
 import ui.pages.extra.Home;
 
 import static ui.objects.Pages.*;
@@ -27,8 +28,8 @@ public class Login {
         click(By.xpath(LOGIN_BTN));
     }
 
-    public static void verifyUserName() {
-        Assert.assertTrue(text(By.xpath(Home.USER_NAME)).contains(user.getUserName()));
+    public static void verifyUserName(String userName) {
+        Assert.assertTrue(text(By.xpath(Home.USER_NAME)).contains(userName));
     }
 
     public static void verifyErrorMessage() {
