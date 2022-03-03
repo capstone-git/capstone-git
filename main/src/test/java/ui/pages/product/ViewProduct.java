@@ -12,7 +12,7 @@ import org.testng.annotations.AfterClass;
 import static ui.objects.Pages.*;
 import ui.tests.BaseTest;
 
-public class ViewProduct {
+public class ViewProduct extends BaseTest {
 
 //    WebDriver driver;
 
