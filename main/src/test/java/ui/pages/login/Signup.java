@@ -1,8 +1,11 @@
 package ui.pages.login;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
+import ui.pages.extra.Home;
 
 import static ui.objects.Pages.*;
+import static ui.tests.bdd.login.Users_initialisation.user;
 
 
 public class Signup {
@@ -12,7 +15,7 @@ public class Signup {
     public static String LAST_NAME = "//input[@id='last_name']";
     public static String COMPANY = "//input[@id='company']";
     public static String USER_FORM = "//input[@id='name']";
-    public static String EMAIL = "//input[@data-qa=\"signup-email\"]";
+    public static String EMAIL = "//input[@data-qa='signup-email']";
     public static String EMAIL_FORM = "//input[@id='email']";
     public static String SIGN_UP = "//button[@data-qa=\"signup-button\"]";
     public static String PASSWORD = "//input[@id='password']";
@@ -30,6 +33,7 @@ public class Signup {
     public static String MOBILE = "//input[@id='mobile_number']";
     public static String CREATE_ACC = "//button[@data-qa='create-account']";
     public static String ACC_CREATED = "//h2[@data-qa='account-created']";
+    public static String ERROR_MSG = "//p[@style='color: red;']";
 
     public static void typeUserName(String name) {
         type(By.xpath(NAME), name);
@@ -119,5 +123,9 @@ public class Signup {
 
     public static void verifyAccountCreated() {
         isElementPresent(By.xpath(ACC_CREATED));
+    }
+
+    public static void verifyErrorMessage() {
+        Assert.assertTrue(text(By.xpath(ERROR_MSG)).contains("Email Address already exist!"));
     }
 }

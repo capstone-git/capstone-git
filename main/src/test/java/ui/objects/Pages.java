@@ -47,6 +47,14 @@ public class Pages {
         new Select(driver.findElement(by)).selectByValue(text);
     }
 
+    public static String text(By by) {
+        return driver.findElement(by).getText();
+    }
+
+    public static String title() {
+        return driver.getTitle();
+    }
+
     public static boolean isElementPresent(By by) {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.presenceOfElementLocated(by));

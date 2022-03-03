@@ -1,23 +1,15 @@
-package ui.tests.bdd;
+package ui.tests.bdd.login;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import ui.objects.UserForm;
 import ui.pages.extra.Home;
 import ui.pages.login.Signup;
 
-public class LoginSteps {
+import static ui.tests.bdd.login.Users_initialisation.user;
 
-    private UserForm user;
-
-    private static int INCREMENT = 0;
-
-    @Given("User data initialised")
-    public void userDataInitialised() {
-        user = new UserForm(++INCREMENT);
-    }
+public class Register_user_with_valid_credentials {
 
     @And("User is on Home page")
     public void userIsOnHomePage() {
@@ -114,7 +106,7 @@ public class LoginSteps {
         Signup.clickCreateAccount();
     }
 
-    @Then("I should be on Account page")
+    @Then("User should be on Account page")
     public void iShouldBeOnAccountPage() {
         Signup.verifyAccountCreated();
     }

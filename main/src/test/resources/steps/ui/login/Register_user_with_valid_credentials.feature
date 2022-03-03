@@ -22,7 +22,7 @@ Feature: New User Signup
     And Enter zipcode
     And Enter mobile
     And Click on Create Account button
-    Then I should be on Account page
+    Then User should be on Account page
 
     Examples:
       | id
