@@ -27,7 +27,7 @@ public class Login_user_with_valid_credentials {
 
     @Then("User should see valid user name")
     public void iShouldSeeValidUserName() {
-        Login.verifyUserName();
+        Login.verifyUserName(user.getUserName());
     }
 
 }

@@ -5,7 +5,7 @@
       <option name="groups">
         <value>
           <list size="1">
-            <item index="0" class="java.lang.String" itemvalue="product_api" />
+            <item index="0" class="java.lang.String" itemvalue="BaseTest" />
           </list>
         </value>
       </option>
