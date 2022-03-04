@@ -1,3 +1,4 @@
+@product
 Feature: Add review on product
 
   Scenario: Add review on first product

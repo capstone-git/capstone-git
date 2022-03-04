@@ -1,3 +1,4 @@
+@product
 Feature: Verify all products and product description page
 
   Scenario: Verify all products and product detail page
