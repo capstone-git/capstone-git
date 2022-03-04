@@ -1,12 +1,11 @@
 package ui.objects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 
 public class Pages {
@@ -66,4 +65,16 @@ public class Pages {
             return false;
         }
     }
+
+    public static boolean verifyWebElements(By by, int expectedNum) {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(by));
+        try{
+            List<WebElement> elements = driver.findElements(by);
+            return expectedNum == elements.size() ? true : false;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
 }
