@@ -5,15 +5,10 @@ import org.testng.Assert;
 import static ui.objects.Pages.*;
 
 public class ProductDetails {
-    //1. Parallel testing
-    //2. Priority param
-    //3. Dependency testing
 
-    // Verify all products page
+    // Declared all identifiers
     public static final String productsButton = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[2]/a";
     public static final String productTitle = "Automation Exercise - All Products";
-
-    // Verify product page details
     public static final String firstProduct = "/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[2]/ul/li/a";
     public static final String productDetailsTitle = "Automation Exercise - Product Details";
     public static final String productName = "/html/body/section/div/div/div[2]/div[2]/div[2]/div/h2";
