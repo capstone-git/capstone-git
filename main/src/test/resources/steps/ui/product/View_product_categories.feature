@@ -1,6 +1,6 @@
 Feature: View category products
 
-  Scenario: Verify that user is navigated to that category page
+  Scenario: Verify that user is navigated to the specified category page
     Given Navigate to home page
     And Verify that categories are visible on left side bar
     When Click on Women category
