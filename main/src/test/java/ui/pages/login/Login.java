@@ -6,7 +6,7 @@ import ui.objects.UserForm;
 import ui.pages.extra.Home;
 
 import static ui.objects.Pages.*;
-import static ui.tests.bdd.login.Users_initialisation.user;
+import static ui.pages.extra.Home.clickSignUpLogin;
 
 public class Login {
 
@@ -45,6 +45,18 @@ public class Login {
         typeLoginEmail(user.getEmail());
         typeLoginPassword(user.getPassword());
         clickOnLogin();
+	}
+	
+    public static void verifyNavigationSingupLoginToCart() {
+        click(By.xpath(Home.CART));
+    }
+
+    public static void loginValidCredentials(UserForm user) {
+        clickSignUpLogin();
+        typeLoginEmail(user.getEmail());
+        typeLoginPassword(user.getPassword());
+        clickOnLogin();
+        verifyUserName(user.getUserName());
     }
 
 }

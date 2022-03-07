@@ -2,6 +2,8 @@ package ui.pages.login;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import ui.objects.UserForm;
+import ui.objects.Utils;
 
 import static ui.objects.Pages.*;
 
@@ -126,4 +128,27 @@ public class Signup {
     public static void verifyErrorMessage() {
         Assert.assertTrue(text(By.xpath(ERROR_MSG)).contains("Email Address already exist!"));
     }
+
+    public static void registerWithValidCredentials(UserForm user) {
+        user.setEmail(Utils.getRandomEmail());
+        typeUserName(user.getUserName());
+        typeEmailAddress(user.getEmail());
+        clickSignup();
+        verifyAccountVisibility();
+        selectTitle(user.getTitle());
+        typePassword(user.getPassword());
+        selectDoB(user.getDob());
+        typeFirstName(user.getFirstName());
+        typeLastName(user.getLastName());
+        typeCompany(user.getCompany());
+        typeAddress(user.getAddress());
+        selectCountry(user.getCountry());
+        selectState(user.getState());
+        typeCity(user.getCity());
+        typeZip(user.getZip());
+        typeMobile(user.getMobile());
+        clickCreateAccount();
+        verifyAccountCreated();
+    }
+
 }
