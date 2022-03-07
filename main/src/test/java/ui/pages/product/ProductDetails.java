@@ -18,6 +18,9 @@ public class ProductDetails {
     public static final String productAvailability = "/html/body/section/div/div/div[2]/div[2]/div[2]/div/p[2]";
     public static final String productCondition = "/html/body/section/div/div/div[2]/div[2]/div[2]/div/p[3]";
     public static final String productBrand = "/html/body/section/div/div/div[2]/div[2]/div[2]/div/p[4]";
+    public static final String homeTitle = "Automation Exercise";
+
+    public static void verifyHomeTitle() { Assert.assertTrue(homeTitle.contains(title())); }
 
     // Verify all products page
     public static void clickProductsButton() { click(By.xpath(productsButton));}
