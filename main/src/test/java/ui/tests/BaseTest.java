@@ -2,30 +2,39 @@ package ui.tests;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import ui.objects.Pages;
-import ui.pages.extra.Home;
 
-import java.time.Duration;
+import static ui.objects.Pages.chromeInvoiceOptions;
+import static ui.objects.Pages.quit;
 
 public class BaseTest {
-    WebDriver driver = new ChromeDriver();
-    Pages pages = new Pages(driver);
+
+    Pages pages;
+
+    @BeforeSuite(groups = {"BaseSuit"})
+    public void setUpSuit() {
+        pages = new Pages("chrome", chromeInvoiceOptions());
+    }
 
     @Before
     @BeforeTest(groups = {"BaseTest"})
-    public void setUp(){
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-        driver.get(Home.BASE_URL);
+    public void setUp() {
+        pages = new Pages("chrome");
     }
 
     @After
     @AfterTest(groups = {"BaseTest"})
     public void tearDown() {
-        driver.quit();
+        quit();
     }
+
+    @AfterSuite(groups = {"BaseSuit"})
+    public void tearDownSuit() {
+        quit();
+    }
+
 }

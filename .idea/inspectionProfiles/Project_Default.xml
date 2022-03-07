@@ -4,8 +4,21 @@
     <inspection_tool class="groupsTestNG" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="groups">
         <value>
-          <list size="1">
-            <item index="0" class="java.lang.String" itemvalue="BaseTest" />
+          <list size="14">
+            <item index="0" class="java.lang.String" itemvalue="Payment" />
+            <item index="1" class="java.lang.String" itemvalue="Cart" />
+            <item index="2" class="java.lang.String" itemvalue="Checkout" />
+            <item index="3" class="java.lang.String" itemvalue="BaseTest" />
+            <item index="4" class="java.lang.String" itemvalue="products" />
+            <item index="5" class="java.lang.String" itemvalue="Signup" />
+            <item index="6" class="java.lang.String" itemvalue="Products" />
+            <item index="7" class="java.lang.String" itemvalue="BaseSuit" />
+            <item index="8" class="java.lang.String" itemvalue="Login" />
+            <item index="9" class="java.lang.String" itemvalue="CheckoutRegister" />
+            <item index="10" class="java.lang.String" itemvalue="CheckoutLogin" />
+            <item index="11" class="java.lang.String" itemvalue="CartLogin" />
+            <item index="12" class="java.lang.String" itemvalue="CartRegister" />
+            <item index="13" class="java.lang.String" itemvalue="CartSignup" />
           </list>
         </value>
       </option>
