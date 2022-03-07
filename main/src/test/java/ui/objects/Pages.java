@@ -17,6 +17,8 @@ import static ui.objects.Utils.getRandomNumber;
 import static ui.pages.extra.Home.navigateHome;
 import static ui.pages.payment.Payment.invoicePath;
 
+import static ui.objects.Utils.getRandomNumber;
+
 
 public class Pages {
 
@@ -143,9 +145,35 @@ public class Pages {
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
         try {
             List<WebElement> elements = driver.findElements(by);
-            return expectedNum == elements.size() ? true : false;
+            return expectedNum == elements.size();
         } catch (NoSuchElementException e) {
             return false;
         }
     }
+
+    public static void scrollToElement(By by) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        //Find element by link text and store in variable "Element"
+        WebElement Element = driver.findElement(By.tagName("body"));
+        //This will scroll the page till the element is found
+        js.executeScript("arguments[0].scrollIntoView();", Element);
+    }
+
+    public static void clickElements(By byList, By byEle, By byContinue) {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(byList));
+
+        try{
+            List<WebElement> elements = driver.findElements(byList);
+
+            for(int i = 0; i < elements.size()-1; i++) {
+                driver.findElement(byEle).click();
+                driver.findElement((byContinue)).click();
+            }
+        } catch (NoSuchElementException e) {
+            System.out.println("Error: " + e);
+        }
+
+    }
+
 }

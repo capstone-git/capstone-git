@@ -1,3 +1,4 @@
+@product
 Feature: Search Product
 
   Scenario: Verify all the products related to search are visible

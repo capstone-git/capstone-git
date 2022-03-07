@@ -1,3 +1,4 @@
+@product
 Feature: View category products
 
   Scenario: Verify that user is navigated to the specified category page
