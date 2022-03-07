@@ -1,16 +1,14 @@
 package ui.tests.product;
 
 import org.testng.annotations.Test;
-import ui.pages.product.ViewProduct;
+import ui.pages.product.ProductDetails;
 
 import static ui.pages.product.ProductListing.*;
 
 public class ProductListingTest {
 
     @Test(description = "This method verifies that homepage loads", priority = 1)
-    public void homePageLoads() {
-        ViewProduct.verifyProductTitle();
-    }
+    public void homePageLoads() { ProductDetails.verifyHomeTitle(); }
 
     @Test(groups = {"Products"}, priority = 1)
     public void test_verify_user_navigate_Home_to_Products_page() {
