@@ -11,7 +11,7 @@
         </groups>
         <classes>
             <class name = "api.login.AccountApi"/>
-            <class name = "ui.tests.login.Signup"/>
+            <class name = "ui.tests.login.LoginTest"/>
             <class name = "ui.tests.BaseTest"/>
         </classes>
     </test>

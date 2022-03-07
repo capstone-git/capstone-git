@@ -1,0 +1,23 @@
+<?xml version = "1.0"encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite" preserve-order="true" parallel="none" thread-count="2">
+    <test name="Register and checkout">
+        <groups>
+            <run>
+                <include name="BaseSuit"/>
+                <include name="Products"/>
+                <include name="Cart"/>
+                <include name="CartSignup"/>
+                <include name="Checkout"/>
+                <include name="Payment"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="ui.tests.BaseTest"/>
+            <class name="ui.tests.product.ProductListingTest"/>
+            <class name="ui.tests.cart.CartTest"/>
+            <class name="ui.tests.checkout.CheckoutTest"/>
+            <class name="ui.tests.payment.PaymentTest"/>
+        </classes>
+    </test>
+</suite>

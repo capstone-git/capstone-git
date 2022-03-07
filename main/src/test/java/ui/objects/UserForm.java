@@ -29,6 +29,9 @@ public class UserForm {
     private String company;
     private String state;
     private String city;
+    private String cardNumber;
+    private String cvc;
+    private String expiration;
     private String f = new File("users.xlsx").getAbsolutePath();
     private File file = new File(f.substring(0, f.length() - "users.xlsx".length()) + "src/test/resources/xlsx/users.xlsx");
 
@@ -110,6 +113,15 @@ public class UserForm {
                         case 14:
                             mobile = c;
                             break;
+                        case 15:
+                            cardNumber = c;
+                            break;
+                        case 16:
+                            cvc = c;
+                            break;
+                        case 17:
+                            expiration = c;
+                            break;
                     }
                 }
                 i++;
@@ -180,6 +192,18 @@ public class UserForm {
 
     public String getCity() {
         return city;
+    }
+
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    public String getCvc() {
+        return cvc;
+    }
+
+    public String getExpiration() {
+        return expiration;
     }
 
     public void setEmail(String email) {
