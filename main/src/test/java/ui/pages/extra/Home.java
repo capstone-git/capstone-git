@@ -1,6 +1,7 @@
 package ui.pages.extra;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 import static ui.objects.Pages.*;
 
@@ -22,6 +23,10 @@ public class Home {
 
     public static void clickLogout(){
         click(By.xpath(LOGOUT));
+    }
+
+    public static void verifyHomeTitle() {
+        Assert.assertTrue(title().contains("Automation Exercise"));
     }
 
 }

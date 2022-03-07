@@ -1,0 +1,18 @@
+<?xml version = "1.0"encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "Cart Test Suite">
+    <test name = "Update and Verify Cart">
+        <groups>
+            <run>
+                <include name = "VerifyCart" />
+                <include name = "UpdateCart" />
+                <include name = "BaseTest" />
+            </run>
+        </groups>
+        <classes>
+            <class name = "ui.tests.cart.VerifyCart"/>
+            <class name = "ui.tests.cart.UpdateCart"/>
+            <class name = "ui.tests.BaseTest"/>
+        </classes>
+    </test>
+</suite>

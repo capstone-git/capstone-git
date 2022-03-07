@@ -40,4 +40,11 @@ public class Login {
         Assert.assertTrue(title().contains(TITLE));
     }
 
+    public static void loginValidCredentialsCart(UserForm user) {
+        Home.clickSignUpLogin();
+        typeLoginEmail(user.getEmail());
+        typeLoginPassword(user.getPassword());
+        clickOnLogin();
+    }
+
 }

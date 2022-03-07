@@ -9,7 +9,8 @@ import ui.pages.product.SearchProduct;
 public class Search_product {
     @When("Entered product name in search input")
     public void entered_product_name_in_search_input() {
-        SearchProduct.enterProductName();
+        // Testing product search "top"
+        SearchProduct.enterProductName("top");
     }
     @And("Click search button")
     public void click_search_button() {
@@ -21,6 +22,7 @@ public class Search_product {
     }
     @And("Verify all products related to search are visible")
     public void verify_all_products_related_to_search_are_visible() {
-        SearchProduct.verifySearchProducts();
+        // top product must have 14 products
+        SearchProduct.verifySearchProducts(14);
     }
 }
