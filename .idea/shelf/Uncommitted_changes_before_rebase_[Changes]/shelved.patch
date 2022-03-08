@@ -1,0 +1,371 @@
+Index: main/src/test/java/ui/pages/login/Login.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ui.pages.login;\r\n\r\nimport org.openqa.selenium.By;\r\nimport org.testng.Assert;\r\nimport ui.pages.extra.Home;\r\n\r\nimport static ui.objects.Pages.*;\r\nimport static ui.tests.bdd.login.Users_initialisation.user;\r\n\r\npublic class Login {\r\n\r\n    public static String EMAIL = \"//input[@name='email']\";\r\n    public static String PASSWORD = \"//input[@name='password']\";\r\n    public static String LOGIN_BTN = \"//button[@data-qa='login-button']\";\r\n    public static String ERROR_MSG = \"//p[@style='color: red;']\";\r\n    public static String TITLE = \"Automation Exercise - Signup / Login\";\r\n\r\n    public static void typeLoginEmail(String email) {\r\n        type(By.xpath(EMAIL), email);\r\n    }\r\n\r\n    public static void typeLoginPassword(String password) {\r\n        type(By.xpath(PASSWORD), password);\r\n    }\r\n\r\n    public static void clickOnLogin() {\r\n        click(By.xpath(LOGIN_BTN));\r\n    }\r\n\r\n    public static void verifyUserName() {\r\n        Assert.assertTrue(text(By.xpath(Home.USER_NAME)).contains(user.getUserName()));\r\n    }\r\n\r\n    public static void verifyErrorMessage() {\r\n        Assert.assertTrue(text(By.xpath(ERROR_MSG)).contains(\"Your email or password is incorrect!\"));\r\n    }\r\n\r\n    public static void verifyTitle() {\r\n        Assert.assertTrue(title().contains(TITLE));\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/java/ui/pages/login/Login.java b/main/src/test/java/ui/pages/login/Login.java
+--- a/main/src/test/java/ui/pages/login/Login.java	(revision b88fd2629352d1376d8193955df96f081d610af9)
++++ b/main/src/test/java/ui/pages/login/Login.java	(date 1646335515476)
+@@ -2,6 +2,7 @@
+ 
+ import org.openqa.selenium.By;
+ import org.testng.Assert;
++import ui.objects.UserForm;
+ import ui.pages.extra.Home;
+ 
+ import static ui.objects.Pages.*;
+@@ -27,8 +28,8 @@
+         click(By.xpath(LOGIN_BTN));
+     }
+ 
+-    public static void verifyUserName() {
+-        Assert.assertTrue(text(By.xpath(Home.USER_NAME)).contains(user.getUserName()));
++    public static void verifyUserName(String userName) {
++        Assert.assertTrue(text(By.xpath(Home.USER_NAME)).contains(userName));
+     }
+ 
+     public static void verifyErrorMessage() {
+Index: main/src/test/java/ui/pages/login/Signup.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ui.pages.login;\r\n\r\nimport org.openqa.selenium.By;\r\nimport org.testng.Assert;\r\nimport ui.pages.extra.Home;\r\n\r\nimport static ui.objects.Pages.*;\r\nimport static ui.tests.bdd.login.Users_initialisation.user;\r\n\r\n\r\npublic class Signup {\r\n\r\n    public static String NAME = \"//input[@data-qa=\\\"signup-name\\\"]\";\r\n    public static String FIRST_NAME = \"//input[@id='first_name']\";\r\n    public static String LAST_NAME = \"//input[@id='last_name']\";\r\n    public static String COMPANY = \"//input[@id='company']\";\r\n    public static String USER_FORM = \"//input[@id='name']\";\r\n    public static String EMAIL = \"//input[@data-qa='signup-email']\";\r\n    public static String EMAIL_FORM = \"//input[@id='email']\";\r\n    public static String SIGN_UP = \"//button[@data-qa=\\\"signup-button\\\"]\";\r\n    public static String PASSWORD = \"//input[@id='password']\";\r\n    public static String ACCOUNT_INFO = \"(//h2[@class='title text-center'])[1]\";\r\n    public static String MR = \"//input[@id='id_gender1']\";\r\n    public static String MRS = \"//input[@id='id_gender2']\";\r\n    public static String SELECT_D = \"//select[@id=\\\"days\\\"]\";\r\n    public static String SELECT_MM = \"//select[@id=\\\"months\\\"]\";\r\n    public static String SELECT_YYYY = \"//select[@id=\\\"years\\\"]\";\r\n    public static String ADDRESS1 = \"//input[@id='address1']\";\r\n    public static String SELECT_CTRY = \"//select[@id='country']\";\r\n    public static String STATE = \"//input[@id='state']\";\r\n    public static String CITY = \"//input[@id='city']\";\r\n    public static String ZIP = \"//input[@id='zipcode']\";\r\n    public static String MOBILE = \"//input[@id='mobile_number']\";\r\n    public static String CREATE_ACC = \"//button[@data-qa='create-account']\";\r\n    public static String ACC_CREATED = \"//h2[@data-qa='account-created']\";\r\n    public static String ERROR_MSG = \"//p[@style='color: red;']\";\r\n\r\n    public static void typeUserName(String name) {\r\n        type(By.xpath(NAME), name);\r\n    }\r\n\r\n    public static void typeEmailAddress(String email) {\r\n        type(By.xpath(EMAIL), email);\r\n    }\r\n\r\n    public static void clickSignup() {\r\n        click(By.xpath(SIGN_UP));\r\n    }\r\n\r\n    public static void typePassword(String password) {\r\n        type(By.xpath(PASSWORD), password);\r\n    }\r\n\r\n    public static void verifyAccountVisibility() {\r\n        isElementPresent(By.xpath(ACCOUNT_INFO));\r\n    }\r\n\r\n    public static void selectTitle(String title) {\r\n        switch (title) {\r\n            case \"Mr.\":\r\n                click(By.xpath(MR));\r\n            case \"Mrs.\":\r\n                click(By.xpath(MRS));\r\n        }\r\n    }\r\n\r\n    public static void typeReEnterUsername(String userName) {\r\n        type(By.xpath(USER_FORM), userName);\r\n    }\r\n\r\n    public static void typeReEnterEmail(String email) {\r\n        type(By.xpath(EMAIL_FORM), email);\r\n    }\r\n\r\n    public static void selectDoB(String dob) {\r\n\r\n        String[] D_M_YYYY = dob.split(\"/\");\r\n\r\n        select(By.xpath(SELECT_D), D_M_YYYY[0]);\r\n        select(By.xpath(SELECT_MM), D_M_YYYY[1]);\r\n        select(By.xpath(SELECT_YYYY), D_M_YYYY[2]);\r\n    }\r\n\r\n    public static void typeFirstName(String name) {\r\n        type(By.xpath(FIRST_NAME), name);\r\n    }\r\n\r\n    public static void typeLastName(String lastName) {\r\n        type(By.xpath(LAST_NAME), lastName);\r\n    }\r\n\r\n    public static void typeCompany(String company) {\r\n        type(By.xpath(COMPANY), company);\r\n    }\r\n\r\n    public static void typeAddress(String address) {\r\n        type(By.xpath(ADDRESS1), address);\r\n    }\r\n\r\n    public static void selectCountry(String country) {\r\n        select(By.xpath(SELECT_CTRY), country);\r\n    }\r\n\r\n    public static void selectState(String state) {\r\n        type(By.xpath(STATE), state);\r\n    }\r\n\r\n    public static void typeCity(String city) {\r\n        type(By.xpath(CITY), city);\r\n    }\r\n\r\n    public static void typeZip(String zip) {\r\n        type(By.xpath(ZIP), zip);\r\n    }\r\n\r\n    public static void typeMobile(String mobile) {\r\n        type(By.xpath(MOBILE), mobile);\r\n    }\r\n\r\n    public static void clickCreateAccount() {\r\n        click(By.xpath(CREATE_ACC));\r\n    }\r\n\r\n    public static void verifyAccountCreated() {\r\n        isElementPresent(By.xpath(ACC_CREATED));\r\n    }\r\n\r\n    public static void verifyErrorMessage() {\r\n        Assert.assertTrue(text(By.xpath(ERROR_MSG)).contains(\"Email Address already exist!\"));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/java/ui/pages/login/Signup.java b/main/src/test/java/ui/pages/login/Signup.java
+--- a/main/src/test/java/ui/pages/login/Signup.java	(revision b88fd2629352d1376d8193955df96f081d610af9)
++++ b/main/src/test/java/ui/pages/login/Signup.java	(date 1646335515507)
+@@ -2,10 +2,8 @@
+ 
+ import org.openqa.selenium.By;
+ import org.testng.Assert;
+-import ui.pages.extra.Home;
+ 
+ import static ui.objects.Pages.*;
+-import static ui.tests.bdd.login.Users_initialisation.user;
+ 
+ 
+ public class Signup {
+Index: main/src/test/java/ui/tests/BaseTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ui.tests;\r\nimport io.cucumber.java.*;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.testng.annotations.AfterClass;\r\nimport org.testng.annotations.AfterTest;\r\nimport org.testng.annotations.BeforeClass;\r\nimport org.testng.annotations.BeforeTest;\r\nimport ui.objects.Pages;\r\nimport ui.pages.extra.Home;\r\n\r\nimport java.time.Duration;\r\n\r\npublic class BaseTest {\r\n    WebDriver driver = new ChromeDriver();\r\n    Pages pages = new Pages(driver);\r\n\r\n    @Before\r\n    @BeforeTest\r\n    public void setUp(){\r\n        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));\r\n        driver.manage().window().maximize();\r\n        driver.get(Home.BASE_URL);\r\n    }\r\n\r\n\r\n    @After\r\n    @AfterTest\r\n    public void tearDown() {\r\n        driver.quit();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/java/ui/tests/BaseTest.java b/main/src/test/java/ui/tests/BaseTest.java
+--- a/main/src/test/java/ui/tests/BaseTest.java	(revision b88fd2629352d1376d8193955df96f081d610af9)
++++ b/main/src/test/java/ui/tests/BaseTest.java	(date 1646342677026)
+@@ -1,10 +1,10 @@
+ package ui.tests;
+-import io.cucumber.java.*;
++
++import io.cucumber.java.After;
++import io.cucumber.java.Before;
+ import org.openqa.selenium.WebDriver;
+ import org.openqa.selenium.chrome.ChromeDriver;
+-import org.testng.annotations.AfterClass;
+ import org.testng.annotations.AfterTest;
+-import org.testng.annotations.BeforeClass;
+ import org.testng.annotations.BeforeTest;
+ import ui.objects.Pages;
+ import ui.pages.extra.Home;
+@@ -16,16 +16,15 @@
+     Pages pages = new Pages(driver);
+ 
+     @Before
+-    @BeforeTest
++    @BeforeTest(groups = {"BaseTest"})
+     public void setUp(){
+         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+         driver.manage().window().maximize();
+         driver.get(Home.BASE_URL);
+     }
+ 
+-
+     @After
+-    @AfterTest
++    @AfterTest(groups = {"BaseTest"})
+     public void tearDown() {
+         driver.quit();
+     }
+Index: main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Invalid user login\r\n\r\n  Scenario Outline: Login with invalid credentials\r\n    Given User data initialised\r\n    And User is on Home page\r\n    And User click SignupLogin\r\n    And User enter invalid Email \"<email>\"\r\n    And User enter invalid Password \"<password>\"\r\n    When User click Login\r\n    Then I should see on Error message\r\n\r\n    Examples:\r\n      | email              | password |\r\n      | ivalid@exaple.com  | 1111     |\r\n      | ivalid2@exaple.com | 2222     |
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature b/main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature
+--- a/main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature	(revision b88fd2629352d1376d8193955df96f081d610af9)
++++ b/main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature	(date 1646331141008)
+@@ -1,3 +1,4 @@
++@login
+ Feature: Invalid user login
+ 
+   Scenario Outline: Login with invalid credentials
+Index: main/src/test/resources/steps/ui/login/Register_user_with_valid_credentials.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: New User Signup\r\n  BDD + DDT\r\n\r\n  Scenario Outline: Signup with valid credentials\r\n    Given User data initialised\r\n    And User is on Home page\r\n    And User click SignupLogin\r\n    And User enter username\r\n    And User enter email\r\n    And User click Signup\r\n    When User is on Account Information page\r\n    And Select title\r\n    And Enter password\r\n    And Select DoB\r\n    And Enter first name\r\n    And Enter last name\r\n    And Enter company\r\n    And Enter address\r\n    And Select country\r\n    And Select state\r\n    And Enter city\r\n    And Enter zipcode\r\n    And Enter mobile\r\n    And Click on Create Account button\r\n    Then User should be on Account page\r\n\r\n    Examples:\r\n      | id\r\n      | 1\r\n      | 2\r\n      | 3
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/resources/steps/ui/login/Register_user_with_valid_credentials.feature b/main/src/test/resources/steps/ui/login/Register_user_with_valid_credentials.feature
+--- a/main/src/test/resources/steps/ui/login/Register_user_with_valid_credentials.feature	(revision b88fd2629352d1376d8193955df96f081d610af9)
++++ b/main/src/test/resources/steps/ui/login/Register_user_with_valid_credentials.feature	(date 1646331140988)
+@@ -1,3 +1,4 @@
++@singup
+ Feature: New User Signup
+   BDD + DDT
+ 
+Index: .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_1.xml b/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_1.xml
+new file mode 100644
+--- /dev/null	(date 1646348598000)
++++ b/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_1.xml	(date 1646348598000)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.13.1/jackson-annotations-2.13.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.13.1/jackson-annotations-2.13.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.13.1/jackson-annotations-2.13.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_1.xml b/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_1.xml
+new file mode 100644
+--- /dev/null	(date 1646348598015)
++++ b/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_1.xml	(date 1646348598015)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.13.1/jackson-core-2.13.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.13.1/jackson-core-2.13.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.13.1/jackson-core-2.13.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_1.xml b/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_1.xml
+new file mode 100644
+--- /dev/null	(date 1646348598028)
++++ b/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_1.xml	(date 1646348598028)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.13.1/jackson-databind-2.13.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.13.1/jackson-databind-2.13.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.13.1/jackson-databind-2.13.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: main/src/test/resources/steps/ui/login/Register_user_with_existing_email.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Exist user registration\r\n\r\n  Scenario Outline: Register exist user\r\n    Given User data initialised\r\n    And User is on Home page\r\n    And User click SignupLogin\r\n    And User enter exist username\r\n    And User enter exist email\r\n    When User click Signup\r\n    Then User should see Error message\r\n\r\n    Examples:\r\n      | id\r\n      | 1\r\n      | 2\r\n      | 3
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/resources/steps/ui/login/Register_user_with_existing_email.feature b/main/src/test/resources/steps/ui/login/Register_user_with_existing_email.feature
+--- a/main/src/test/resources/steps/ui/login/Register_user_with_existing_email.feature	(revision b88fd2629352d1376d8193955df96f081d610af9)
++++ b/main/src/test/resources/steps/ui/login/Register_user_with_existing_email.feature	(date 1646331140998)
+@@ -1,3 +1,4 @@
++@login
+ Feature: Exist user registration
+ 
+   Scenario Outline: Register exist user
+Index: main/src/test/resources/steps/ui/login/Login_user_with_valid_credentials.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Exist user login\r\n  BDD + DDT\r\n\r\n  Scenario Outline: Login with valid credentials\r\n    Given User data initialised\r\n    And User is on Home page\r\n    And User click SignupLogin\r\n    And User enter valid email\r\n    And User enter valid password\r\n    When User click Login\r\n    Then User should see valid user name\r\n\r\n    Examples:\r\n      | id\r\n      | 1\r\n      | 2\r\n      | 3
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/resources/steps/ui/login/Login_user_with_valid_credentials.feature b/main/src/test/resources/steps/ui/login/Login_user_with_valid_credentials.feature
+--- a/main/src/test/resources/steps/ui/login/Login_user_with_valid_credentials.feature	(revision b88fd2629352d1376d8193955df96f081d610af9)
++++ b/main/src/test/resources/steps/ui/login/Login_user_with_valid_credentials.feature	(date 1646331140977)
+@@ -1,3 +1,4 @@
++@login
+ Feature: Exist user login
+   BDD + DDT
+ 
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+new file mode 100644
+--- /dev/null	(date 1646344383100)
++++ b/.idea/inspectionProfiles/Project_Default.xml	(date 1646344383100)
+@@ -0,0 +1,16 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="groupsTestNG" enabled="true" level="WARNING" enabled_by_default="true">
++      <option name="groups">
++        <value>
++          <list size="3">
++            <item index="0" class="java.lang.String" itemvalue="Base" />
++            <item index="1" class="java.lang.String" itemvalue="BaseTest" />
++            <item index="2" class="java.lang.String" itemvalue="API" />
++          </list>
++        </value>
++      </option>
++    </inspection_tool>
++  </profile>
++</component>
+\ No newline at end of file
+Index: main/src/test/java/ui/tests/bdd/login/Login_user_with_valid_credentials.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ui.tests.bdd.login;\r\n\r\nimport io.cucumber.java.en.And;\r\nimport io.cucumber.java.en.Then;\r\nimport io.cucumber.java.en.When;\r\nimport ui.pages.login.Login;\r\n\r\nimport static ui.tests.bdd.login.Users_initialisation.user;\r\n\r\n\r\npublic class Login_user_with_valid_credentials {\r\n\r\n    @And(\"User enter valid email\")\r\n    public void userEnterValidEmail() {\r\n        Login.typeLoginEmail(user.getEmail());\r\n    }\r\n\r\n    @And(\"User enter valid password\")\r\n    public void userEnterValidPassword() {\r\n        Login.typeLoginPassword(user.getPassword());\r\n    }\r\n\r\n    @When(\"User click Login\")\r\n    public void userClickLogin() {\r\n        Login.clickOnLogin();\r\n    }\r\n\r\n    @Then(\"User should see valid user name\")\r\n    public void iShouldSeeValidUserName() {\r\n        Login.verifyUserName();\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/java/ui/tests/bdd/login/Login_user_with_valid_credentials.java b/main/src/test/java/ui/tests/bdd/login/Login_user_with_valid_credentials.java
+--- a/main/src/test/java/ui/tests/bdd/login/Login_user_with_valid_credentials.java	(revision b88fd2629352d1376d8193955df96f081d610af9)
++++ b/main/src/test/java/ui/tests/bdd/login/Login_user_with_valid_credentials.java	(date 1646335515536)
+@@ -27,7 +27,7 @@
+ 
+     @Then("User should see valid user name")
+     public void iShouldSeeValidUserName() {
+-        Login.verifyUserName();
++        Login.verifyUserName(user.getUserName());
+     }
+ 
+ }
+Index: main/src/test/java/ui/objects/Utils.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ui.objects;\r\n\r\nimport net.bytebuddy.utility.RandomString;\r\n\r\nimport java.util.Locale;\r\n\r\npublic class Utils {\r\n\r\n    public static String getRandomSting(int length){\r\n        return new RandomString(length).nextString().toLowerCase(Locale.ROOT);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/java/ui/objects/Utils.java b/main/src/test/java/ui/objects/Utils.java
+--- a/main/src/test/java/ui/objects/Utils.java	(revision b88fd2629352d1376d8193955df96f081d610af9)
++++ b/main/src/test/java/ui/objects/Utils.java	(date 1646344879580)
+@@ -6,7 +6,16 @@
+ 
+ public class Utils {
+ 
+-    public static String getRandomSting(int length){
++    public static String getRandomString(int length){
+         return new RandomString(length).nextString().toLowerCase(Locale.ROOT);
+     }
++
++    public static String getRandomEmail(){
++        return getRandomString(5)+"@example.com";
++    }
++
++    public static int getRandomNumber(int min, int max) {
++        return (int) ((Math.random() * (max - min)) + min);
++    }
++
+ }
+Index: main/src/test/java/ui/objects/UserForm.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ui.objects;\r\n\r\nimport org.apache.poi.ss.usermodel.Cell;\r\nimport org.apache.poi.ss.usermodel.Row;\r\nimport org.apache.poi.ss.usermodel.Sheet;\r\nimport org.apache.poi.ss.usermodel.Workbook;\r\nimport org.apache.poi.xssf.usermodel.XSSFWorkbook;\r\n\r\nimport java.io.File;\r\nimport java.io.FileInputStream;\r\nimport java.io.FileNotFoundException;\r\nimport java.io.IOException;\r\nimport java.util.Iterator;\r\n\r\npublic class UserForm {\r\n\r\n    private int ID;\r\n    private String zip;\r\n    private String userName;\r\n    private String firstName;\r\n    private String lastName;\r\n    private String email;\r\n    private String title;\r\n    private String mobile;\r\n    private String dob;\r\n    private String password;\r\n    private String address;\r\n    private String country;\r\n    private String company;\r\n    private String state;\r\n    private String city;\r\n    private String f = new File(\"users.xlsx\").getAbsolutePath();\r\n    private File file = new File(f.substring(0, f.length() - \"users.xlsx\".length()) + \"src/test/resources/xlsx/users.xlsx\");\r\n\r\n    public UserForm(int ID) {\r\n        this.ID = ID;\r\n        parse(ID);\r\n    }\r\n\r\n    private void parse(int idRow) {\r\n        FileInputStream inputStream = null;\r\n        try {\r\n\r\n            inputStream = new FileInputStream(file);\r\n\r\n            Workbook workbook = new XSSFWorkbook(inputStream);\r\n            Sheet firstSheet = workbook.getSheetAt(0);\r\n\r\n            Row getRow = firstSheet.getRow(idRow);\r\n\r\n            Iterator<Cell> cellIterator = getRow.cellIterator();\r\n\r\n            int i = 0;\r\n\r\n            while (cellIterator.hasNext()) {\r\n\r\n                Cell cell = cellIterator.next();\r\n\r\n                String c = \"\";\r\n                switch (cell.getCellType()) {\r\n                    case NUMERIC:\r\n                        c = String.valueOf(cell.getNumericCellValue());\r\n                        break;\r\n                    case STRING:\r\n                        c = cell.getStringCellValue();\r\n                        break;\r\n                }\r\n\r\n                if (i != 0) {\r\n                    switch (i) {\r\n                        case 1:\r\n                            title = c;\r\n                            break;\r\n                        case 2:\r\n                            userName = c;\r\n                            break;\r\n                        case 3:\r\n                            email = c;\r\n                            break;\r\n                        case 4:\r\n                            password = c;\r\n                            break;\r\n                        case 5:\r\n                            dob = c;\r\n                            break;\r\n                        case 6:\r\n                            firstName = c;\r\n                            break;\r\n                        case 7:\r\n                            lastName = c;\r\n                            break;\r\n                        case 8:\r\n                            company = c;\r\n                            break;\r\n                        case 9:\r\n                            address = c;\r\n                            break;\r\n                        case 10:\r\n                            state = c;\r\n                            break;\r\n                        case 11:\r\n                            city = c;\r\n                            break;\r\n                        case 12:\r\n                            country = c;\r\n                            break;\r\n                        case 13:\r\n                            zip = c;\r\n                            break;\r\n                        case 14:\r\n                            mobile = c;\r\n                            break;\r\n                    }\r\n                }\r\n                i++;\r\n            }\r\n\r\n        } catch (FileNotFoundException e) {\r\n            e.printStackTrace();\r\n        } catch (IOException e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n\r\n    public int getID() {\r\n        return ID;\r\n    }\r\n\r\n    public String getFirstName() {\r\n        return firstName;\r\n    }\r\n\r\n    public String getPassword() {\r\n        return password;\r\n    }\r\n\r\n    public String getCompany() {\r\n        return company;\r\n    }\r\n\r\n    public String getAddress() {\r\n        return address;\r\n    }\r\n\r\n    public String getZip() {\r\n        return zip;\r\n    }\r\n\r\n    public String getUserName() {\r\n        return userName;\r\n    }\r\n\r\n    public String getLastName() {\r\n        return lastName;\r\n    }\r\n\r\n    public String getEmail() {\r\n        return email;\r\n    }\r\n\r\n    public String getTitle() {\r\n        return title;\r\n    }\r\n\r\n    public String getMobile() {\r\n        return mobile;\r\n    }\r\n\r\n    public String getDob() {\r\n        return dob;\r\n    }\r\n\r\n    public String getCountry() {\r\n        return country;\r\n    }\r\n\r\n    public String getState() {\r\n        return state;\r\n    }\r\n\r\n    public String getCity() {\r\n        return city;\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/java/ui/objects/UserForm.java b/main/src/test/java/ui/objects/UserForm.java
+--- a/main/src/test/java/ui/objects/UserForm.java	(revision b88fd2629352d1376d8193955df96f081d610af9)
++++ b/main/src/test/java/ui/objects/UserForm.java	(date 1646341563008)
+@@ -182,4 +182,8 @@
+         return city;
+     }
+ 
++    public void setEmail(String email) {
++        this.email = email;
++    }
++
+ }
+Index: main/src/test/java/ui/pages/product/ViewProduct.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ui.pages.product;\r\n\r\nimport org.testng.Assert;\r\nimport org.testng.annotations.*;\r\n\r\nimport java.util.concurrent.TimeUnit;\r\n\r\nimport org.openqa.selenium.By;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.testng.annotations.AfterClass;\r\nimport static ui.objects.Pages.*;\r\nimport ui.tests.BaseTest;\r\n\r\npublic class ViewProduct extends BaseTest {\r\n\r\n//    WebDriver driver;\r\n\r\n//1. Parallel testing\r\n//2. Priority param\r\n//3. Dependency testing\r\n    public static final String productTitle = \"Automation Exercise\";\r\n\r\n    public static void verifyProductTitle() {\r\n        Assert.assertTrue(productTitle.contains(title()));\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/java/ui/pages/product/ViewProduct.java b/main/src/test/java/ui/pages/product/ViewProduct.java
+--- a/main/src/test/java/ui/pages/product/ViewProduct.java	(revision b88fd2629352d1376d8193955df96f081d610af9)
++++ b/main/src/test/java/ui/pages/product/ViewProduct.java	(date 1646331026108)
+@@ -12,7 +12,7 @@
+ import static ui.objects.Pages.*;
+ import ui.tests.BaseTest;
+ 
+-public class ViewProduct extends BaseTest {
++public class ViewProduct {
+ 
+ //    WebDriver driver;
+ 
+Index: main/src/test/java/ui/tests/product/ProductTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ui.tests.product;\r\n\r\nimport org.testng.annotations.Test;\r\nimport ui.pages.product.ViewProduct;\r\nimport ui.tests.BaseTest;\r\n\r\npublic class ProductTest extends BaseTest {\r\n\r\n    @Test(description = \"This method verifies that homepage loads\", priority = 1)\r\n    public void homePageLoads() {\r\n        ViewProduct.verifyProductTitle();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/java/ui/tests/product/ProductTest.java b/main/src/test/java/ui/tests/product/ProductTest.java
+--- a/main/src/test/java/ui/tests/product/ProductTest.java	(revision b88fd2629352d1376d8193955df96f081d610af9)
++++ b/main/src/test/java/ui/tests/product/ProductTest.java	(date 1646330952013)
+@@ -4,7 +4,7 @@
+ import ui.pages.product.ViewProduct;
+ import ui.tests.BaseTest;
+ 
+-public class ProductTest extends BaseTest {
++public class ProductTest{
+ 
+     @Test(description = "This method verifies that homepage loads", priority = 1)
+     public void homePageLoads() {
+Index: main/src/test/resources/steps/ui/login/Logout_user.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Logout user\r\n  BDD + DDT\r\n\r\n  Background: Login with valid credentials\r\n    Given User data initialised\r\n    And User is on Home page\r\n    And User click SignupLogin\r\n    And User enter valid email\r\n    And User enter valid password\r\n    When User click Login\r\n    Then User should see valid user name\r\n\r\n  Scenario Outline: Logout user\r\n    Given User is on Home page\r\n    When User click Logout\r\n    Then User should be on Login page\r\n\r\n    Examples:\r\n      | id\r\n      | 1\r\n      | 2\r\n      | 3
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/resources/steps/ui/login/Logout_user.feature b/main/src/test/resources/steps/ui/login/Logout_user.feature
+--- a/main/src/test/resources/steps/ui/login/Logout_user.feature	(revision b88fd2629352d1376d8193955df96f081d610af9)
++++ b/main/src/test/resources/steps/ui/login/Logout_user.feature	(date 1646331141029)
+@@ -1,3 +1,4 @@
++@login
+ Feature: Logout user
+   BDD + DDT
+ 
