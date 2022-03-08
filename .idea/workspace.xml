@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ca46f05-766c-41a8-9e81-3f749fc345c3" name="Changes" comment="" />
+    <list default="true" id="9ca46f05-766c-41a8-9e81-3f749fc345c3" name="Changes" comment="Routed to another method">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2022_8_36_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2022_8_36_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="oleksandr_contact_form_home_cart_subscriptions_ui" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -109,10 +113,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/login_and_checkout_ui.xml" />
-        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_checkout_ui.xml" />
         <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_login_api_ui.xml" />
+        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_checkout_ui.xml" />
         <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/productApi.xml" />
+        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/login_and_checkout_ui.xml" />
         <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/cart_ui.xml" />
       </list>
     </recent_temporary>

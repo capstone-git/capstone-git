@@ -1,9 +1,9 @@
-const Page = require("./page");
+const Page=require('./page');
 
 /**
  * sub page containing specific selectors and methods for a specific page
  */
- class HomePage extends Page {
+class HomePage extends Page {
     /**
      * define selectors using getter methods
      */
@@ -15,10 +15,38 @@ const Page = require("./page");
     /**
      * a method to encapsule automation code to interact with the page
      */
-    async testCases () {
+    async testCases() {
         await this.testCasesbtn.click();
     }
-    
+
+    open() {
+        return super.open('');
+    }
+
+    async textEmailSubscribe() {
+        await this.getEmailSubscribe.setValue('exaple@exaple.com');
+    }
+
+    async clickButtonSubscribe() {
+        await this.getButtonSubscribe.click();
+    }
+
+    get getEmailSubscribe() {
+        return $('//input[@id=\'susbscribe_email\']');
+    }
+
+    get getButtonSubscribe() {
+        return $('//button[@id=\'subscribe\']');
+    }
+
+    get getSuccessMessage() {
+        return $('//div[@class=\'alert-success alert\']');
+    }
+
+    async pressDown() {
+        await browser.keys("\uE015")
+    }
+
 }
 
-module.exports = new HomePage();
+module .exports =new HomePage();
