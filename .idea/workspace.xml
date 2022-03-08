@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca46f05-766c-41a8-9e81-3f749fc345c3" name="Changes" comment="Routed to another method">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2022_8_36_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2022_8_36_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/login_and_checkout_ui.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/login_and_checkout_ui.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/signup_and_checkout_ui.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/signup_and_checkout_ui.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/signup_and_login_api_ui.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/signup_and_login_api_ui.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/signup_and_login_ui_bbd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/signup_and_login_ui_bbd.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/test/java/ui/objects/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/java/ui/objects/Pages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/test/java/ui/objects/UserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/java/ui/objects/UserForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/test/resources/steps/ui/login/Logout_user.feature" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/resources/steps/ui/login/Logout_user.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/test/resources/xlsx/users.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/resources/xlsx/users.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +66,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/js/test" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\oleksandr.c.BRILLIO\IdeaProjects\capstone-main\js\test" />
+    </key>
   </component>
   <component name="RunManager" selected="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/login_and_checkout_ui.xml">
-    <configuration name="C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/cart_ui.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/Users/oleksandr.c.BRILLIO/IdeaProjects/capstone-main/main/signup_and_login_ui_bbd.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="main" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/main/cart_ui.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/main/signup_and_login_ui_bbd.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -113,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/login_and_checkout_ui.xml" />
+        <item itemvalue="TestNG.C:/Users/oleksandr.c.BRILLIO/IdeaProjects/capstone-main/main/signup_and_login_ui_bbd.xml" />
         <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_login_api_ui.xml" />
         <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_checkout_ui.xml" />
         <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/productApi.xml" />
-        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/login_and_checkout_ui.xml" />
-        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/cart_ui.xml" />
       </list>
     </recent_temporary>
   </component>
