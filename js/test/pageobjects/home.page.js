@@ -43,14 +43,6 @@ const Page = require("./page");
         await browser.keys("\uE015")
     }
 
-    async subscritpionScrollTo() {
-        await this.subscription.scrollIntovView();
-    }
-
-    async topDescScrollTo() {
-        await this.topDescription.scrollIntovView();
-    }
-
 }
 
 module.exports = new HomePage();
