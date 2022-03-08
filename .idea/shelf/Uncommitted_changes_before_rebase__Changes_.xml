@@ -1,0 +1,59 @@
+<changelist name="Uncommitted_changes_before_rebase_[Changes]" date="1646348847144" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="main/target/test-classes/ui/pages/login/Signup.class" />
+    <option name="AFTER_PATH" value="main/target/test-classes/ui/pages/login/Signup.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Signup.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="main/target/test-classes/ui/pages/extra/Home.class" />
+    <option name="AFTER_PATH" value="main/target/test-classes/ui/pages/extra/Home.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Home.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="main/src/test/resources/xlsx/users.xlsx" />
+    <option name="AFTER_PATH" value="main/src/test/resources/xlsx/users.xlsx" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/users.xlsx" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="main/target/test-classes/ui/objects/UserForm.class" />
+    <option name="AFTER_PATH" value="main/target/test-classes/ui/objects/UserForm.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/UserForm.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="main/target/test-classes/ui/objects/Utils.class" />
+    <option name="AFTER_PATH" value="main/target/test-classes/ui/objects/Utils.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Utils.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="main/target/test-classes/ui/tests/BaseTest.class" />
+    <option name="AFTER_PATH" value="main/target/test-classes/ui/tests/BaseTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/BaseTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="main/target/test-classes/api/product/ProductList.class" />
+    <option name="AFTER_PATH" value="main/target/test-classes/api/product/ProductList.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/ProductList.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="main/target/test-classes/ui/pages/product/ViewProduct.class" />
+    <option name="AFTER_PATH" value="main/target/test-classes/ui/pages/product/ViewProduct.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/ViewProduct.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="main/src/test/java/api/login/o" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="main/target/test-classes/ui/objects/Pages.class" />
+    <option name="AFTER_PATH" value="main/target/test-classes/ui/objects/Pages.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Pages.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="main/target/test-classes/xlsx/users.xlsx" />
+    <option name="AFTER_PATH" value="main/target/test-classes/xlsx/users.xlsx" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/users1.xlsx" />
+  </binary>
+</changelist>

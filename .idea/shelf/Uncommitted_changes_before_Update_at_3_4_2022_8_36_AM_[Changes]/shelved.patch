@@ -1,0 +1,95 @@
+Index: main/src/test/java/ui/tests/login/Signup.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ui.tests.login;\r\n\r\nimport org.testng.annotations.Test;\r\n\r\nimport static api.login.AccountApi.user;\r\nimport static ui.pages.extra.Home.clickSignUpLogin;\r\nimport static ui.pages.extra.Home.navigateHome;\r\nimport static ui.pages.login.Login.*;\r\n\r\npublic class Signup {\r\n\r\n    @Test(groups = {\"API to UI\"}, priority = 1)\r\n    public void test_Login_user_with_valid_credentials_after_api_user_registration() {\r\n        navigateHome();\r\n        clickSignUpLogin();\r\n        typeLoginEmail(user.getEmail());\r\n        typeLoginPassword(user.getPassword());\r\n        clickOnLogin();\r\n        verifyUserName(user.getUserName());\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/java/ui/tests/login/Signup.java b/main/src/test/java/ui/tests/login/Signup.java
+--- a/main/src/test/java/ui/tests/login/Signup.java	(revision 4d4102e9b3490800f48de287258af87ad2092053)
++++ b/main/src/test/java/ui/tests/login/Signup.java	(date 1646367878029)
+@@ -6,6 +6,8 @@
+ import static ui.pages.extra.Home.clickSignUpLogin;
+ import static ui.pages.extra.Home.navigateHome;
+ import static ui.pages.login.Login.*;
++import static ui.pages.login.Signup.*;
++
+ 
+ public class Signup {
+ 
+@@ -19,4 +21,27 @@
+         verifyUserName(user.getUserName());
+     }
+ 
++    @Test()
++    public void test_Register_user_with_valid_credentials() {
++        navigateHome();
++        clickSignUpLogin();
++        typeUserName(user.getUserName());
++        typeEmailAddress(user.getEmail());
++        clickSignup();
++        verifyAccountVisibility();
++        selectTitle(user.getTitle());
++        typePassword(user.getPassword());
++        selectDoB(user.getDob());
++        typeFirstName(user.getFirstName());
++        typeLastName(user.getLastName());
++        typeCompany(user.getCompany());
++        typeAddress(user.getAddress());
++        selectCountry(user.getCountry());
++        selectState(user.getState());
++        typeCity(user.getCity());
++        typeZip(user.getZip());
++        typeMobile(user.getMobile());
++        clickCreateAccount();
++        verifyAccountCreated();
++    }
+ }
+Index: main/place_order_and_checkout_ui.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/place_order_and_checkout_ui.xml b/main/place_order_and_checkout_ui.xml
+new file mode 100644
+--- /dev/null	(date 1646350865908)
++++ b/main/place_order_and_checkout_ui.xml	(date 1646350865908)
+@@ -0,0 +1,18 @@
++<?xml version = "1.0"encoding = "UTF-8"?>
++<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
++<suite name = "BDD Test Suite" thread-count="2">
++    <test name = "Register and login with new users">
++        <groups>
++            <run>
++                <include name = "API to UI" />
++                <include name = "API" />
++                <include name = "BaseTest" />
++            </run>
++        </groups>
++        <classes>
++            <class name = "api.login.AccountApi"/>
++            <class name = "ui.tests.login.Signup"/>
++            <class name = "ui.tests.BaseTest"/>
++        </classes>
++    </test>
++</suite>
+\ No newline at end of file
+Index: main/src/test/java/ui/pages/product/ViewProduct.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ui.pages.product;\r\n\r\nimport org.testng.Assert;\r\nimport org.testng.annotations.*;\r\n\r\nimport java.util.concurrent.TimeUnit;\r\n\r\nimport org.openqa.selenium.By;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.testng.annotations.AfterClass;\r\nimport static ui.objects.Pages.*;\r\nimport ui.tests.BaseTest;\r\n\r\npublic class ViewProduct extends BaseTest {\r\n\r\n//    WebDriver driver;\r\n\r\n//1. Parallel testing\r\n//2. Priority param\r\n//3. Dependency testing\r\n    public static final String productTitle = \"Automation Exercise\";\r\n\r\n    public static void verifyProductTitle() {\r\n        Assert.assertTrue(productTitle.contains(title()));\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/java/ui/pages/product/ViewProduct.java b/main/src/test/java/ui/pages/product/ViewProduct.java
+--- a/main/src/test/java/ui/pages/product/ViewProduct.java	(revision 4d4102e9b3490800f48de287258af87ad2092053)
++++ b/main/src/test/java/ui/pages/product/ViewProduct.java	(date 1646351391490)
+@@ -12,7 +12,7 @@
+ import static ui.objects.Pages.*;
+ import ui.tests.BaseTest;
+ 
+-public class ViewProduct extends BaseTest {
++public class ViewProduct {
+ 
+ //    WebDriver driver;
+ 
