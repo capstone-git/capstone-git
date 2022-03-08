@@ -4,10 +4,13 @@ var assert = require('assert');
 
 describe('Verifying Test Case Page', () => {
     it('should navigate to test case page', async () => {
+        await browser.maximizeWindow();
         await HomePage.open();
-        await HomePage.testCases();
 
+        // clicks on test cases button
+        await HomePage.testCases();
+        // Verifies title
         const title = await TestCase.title();
-        assert.equal(title, 'TEST CASES');
+        await assert.equal(title, 'TEST CASES');
     });
 });
