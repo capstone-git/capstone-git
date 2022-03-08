@@ -67,6 +67,9 @@ public class UserForm {
                     case STRING:
                         c = cell.getStringCellValue();
                         break;
+                    case FORMULA:
+                        c = cell.getStringCellValue();
+                        break;
                 }
 
                 if (i != 0) {

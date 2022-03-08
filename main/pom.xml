@@ -116,7 +116,17 @@
                             <!-- Pass testng.xml files as argument from command line -->
                             <!-- mvn clean test -DsuiteXmlFile="regression.xml"-->
                             <!--suppress UnresolvedMavenProperty -->
-                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+<!--                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
+
+                            <suiteXmlFile>signup_and_checkout_ui.xml</suiteXmlFile>
+                            <suiteXmlFile>signup_and_login_api_ui.xml</suiteXmlFile>
+                            <suiteXmlFile>signup_and_login_ui_bbd.xml</suiteXmlFile>
+                            <suiteXmlFile>login_and_checkout_ui.xml</suiteXmlFile>
+
+                            <suiteXmlFile>product_ui_bdd.xml</suiteXmlFile>
+                            <suiteXmlFile>productApi.xml</suiteXmlFile>
+                            <suiteXmlFile>cart_ui.xml</suiteXmlFile>
+
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>

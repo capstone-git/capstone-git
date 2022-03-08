@@ -11,6 +11,7 @@ Feature: Invalid user login
     Then I should see on Error message
 
     Examples:
-      | email              | password |
-      | ivalid@exaple.com  | 1111     |
-      | ivalid2@exaple.com | 2222     |
+      | email             | password |
+      | ivalid@exaple.com | 1111     |
+      | @exaple.com       | 2222     |
+      | ivalidexaple.com  | 2222     |
