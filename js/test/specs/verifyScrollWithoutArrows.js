@@ -3,7 +3,6 @@ var assert = require('assert');
 
 describe('Verifying scroll without arrow keys', () => {
     it('should scroll up and down the home page without using arrow keys', async () => {
-        await browser.maximizeWindow()
         await HomePage.open();
 
         // Scrolling to the bottom without down arrow key and verifying subscription

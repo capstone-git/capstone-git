@@ -4,7 +4,6 @@ var assert = require('assert');
 
 describe('Verifying Test Case Page', () => {
     it('should navigate to test case page', async () => {
-        await browser.maximizeWindow();
         await HomePage.open();
 
         // clicks on test cases button
