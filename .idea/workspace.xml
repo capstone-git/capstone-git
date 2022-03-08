@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca46f05-766c-41a8-9e81-3f749fc345c3" name="Changes" comment="Routed to another method">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_7_2022_7_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_7_2022_7_35_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2022_8_36_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2022_8_36_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +62,7 @@
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/login_and_checkout_ui.xml">
+  <component name="RunManager" selected="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/cart_ui.xml">
     <configuration name="C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/cart_ui.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="main" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/main/cart_ui.xml" />
@@ -91,9 +93,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_checkout_ui.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/product_ui_bdd.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="main" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/main/signup_and_checkout_ui.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/main/product_ui_bdd.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -101,9 +103,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_login_api_ui.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_login_ui_bbd.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="main" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/main/signup_and_login_api_ui.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/main/signup_and_login_ui_bbd.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -113,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_login_api_ui.xml" />
-        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_checkout_ui.xml" />
-        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/productApi.xml" />
-        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/login_and_checkout_ui.xml" />
         <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/cart_ui.xml" />
+        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_login_ui_bbd.xml" />
+        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/login_and_checkout_ui.xml" />
+        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/product_ui_bdd.xml" />
+        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/productApi.xml" />
       </list>
     </recent_temporary>
   </component>
