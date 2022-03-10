@@ -1,0 +1,9 @@
+<changelist name="Uncommitted_changes_before_Merge_at_3_10_2022_11_06_AM_[Changes]" date="1646939177827" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_3_10_2022_11_06_AM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Merge at 3/10/2022 11:06 AM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="main/src/test/resources/xlsx/users.xlsx" />
+    <option name="AFTER_PATH" value="main/src/test/resources/xlsx/users.xlsx" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_3_10_2022_11_06_AM_[Changes]/users.xlsx" />
+  </binary>
+</changelist>

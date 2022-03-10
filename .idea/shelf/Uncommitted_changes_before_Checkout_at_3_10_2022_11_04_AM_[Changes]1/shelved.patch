@@ -1,0 +1,258 @@
+Index: main/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <groupId>org.example</groupId>\r\n    <artifactId>main</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n\r\n    <properties>\r\n        <maven.compiler.source>8</maven.compiler.source>\r\n        <maven.compiler.target>8</maven.compiler.target>\r\n    </properties>\r\n\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>org.apache.poi</groupId>\r\n            <artifactId>poi</artifactId>\r\n            <version>4.1.2</version>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>org.apache.poi</groupId>\r\n            <artifactId>poi-ooxml</artifactId>\r\n            <version>4.1.2</version>\r\n        </dependency>\r\n\r\n        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->\r\n        <dependency>\r\n            <groupId>io.cucumber</groupId>\r\n            <artifactId>cucumber-java</artifactId>\r\n            <version>6.10.4</version>\r\n        </dependency>\r\n\r\n        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->\r\n        <dependency>\r\n            <groupId>org.seleniumhq.selenium</groupId>\r\n            <artifactId>selenium-java</artifactId>\r\n            <version>4.1.2</version>\r\n        </dependency>\r\n\r\n        <!-- https://mvnrepository.com/artifact/org.testng/testng -->\r\n        <dependency>\r\n            <groupId>org.testng</groupId>\r\n            <artifactId>testng</artifactId>\r\n            <version>7.4.0</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n\r\n        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->\r\n        <dependency>\r\n            <groupId>io.cucumber</groupId>\r\n            <artifactId>cucumber-testng</artifactId>\r\n            <version>6.10.4</version>\r\n        </dependency>\r\n\r\n        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-core -->\r\n        <dependency>\r\n            <groupId>org.hamcrest</groupId>\r\n            <artifactId>hamcrest</artifactId>\r\n            <version>2.2</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>org.testng</groupId>\r\n            <artifactId>testng</artifactId>\r\n            <version>7.4.0</version>\r\n            <scope>compile</scope>\r\n        </dependency>\r\n\r\n        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->\r\n        <dependency>\r\n            <groupId>io.rest-assured</groupId>\r\n            <artifactId>rest-assured</artifactId>\r\n            <version>4.3.3</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n\r\n        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->\r\n        <dependency>\r\n            <groupId>com.fasterxml.jackson.core</groupId>\r\n            <artifactId>jackson-databind</artifactId>\r\n            <version>2.13.1</version>\r\n        </dependency>\r\n\r\n    </dependencies>\r\n\r\n    <build>\r\n        <pluginManagement>\r\n            <plugins>\r\n                <plugin>\r\n                    <groupId>org.apache.maven.plugins</groupId>\r\n                    <artifactId>maven-compiler-plugin</artifactId>\r\n                    <version>3.8.1</version>\r\n                    <configuration>\r\n                        <encoding>UTF-8</encoding>\r\n                        <source>1.8</source>\r\n                        <target>1.8</target>\r\n                    </configuration>\r\n                </plugin>\r\n\r\n                <plugin>\r\n                    <groupId>org.apache.maven.plugins</groupId>\r\n                    <artifactId>maven-surefire-plugin</artifactId>\r\n                    <version>3.0.0-M5</version>\r\n                </plugin>\r\n\r\n                <plugin>\r\n                    <groupId>org.apache.maven.plugins</groupId>\r\n                    <artifactId>maven-surefire-plugin</artifactId>\r\n                    <version>3.0.0-M5</version>\r\n                    <configuration>\r\n                        <suiteXmlFiles>\r\n                            <!-- Pass testng.xml files as argument from command line -->\r\n                            <!-- mvn clean test -DsuiteXmlFile=\"regression.xml\"-->\r\n                            <!--suppress UnresolvedMavenProperty -->\r\n<!--                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->\r\n\r\n                            <suiteXmlFile>signup_and_checkout_ui.xml</suiteXmlFile>\r\n                            <suiteXmlFile>signup_and_login_api_ui.xml</suiteXmlFile>\r\n                            <suiteXmlFile>signup_and_login_ui_bbd.xml</suiteXmlFile>\r\n                            <suiteXmlFile>login_and_checkout_ui.xml</suiteXmlFile>\r\n\r\n                            <suiteXmlFile>product_ui_bdd.xml</suiteXmlFile>\r\n                            <suiteXmlFile>productApi.xml</suiteXmlFile>\r\n                            <suiteXmlFile>cart_ui.xml</suiteXmlFile>\r\n\r\n                        </suiteXmlFiles>\r\n                    </configuration>\r\n                </plugin>\r\n            </plugins>\r\n        </pluginManagement>\r\n    </build>\r\n\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/pom.xml b/main/pom.xml
+--- a/main/pom.xml	
++++ b/main/pom.xml	
+@@ -14,6 +14,13 @@
+     </properties>
+ 
+     <dependencies>
++        <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
++        <dependency>
++            <groupId>com.relevantcodes</groupId>
++            <artifactId>extentreports</artifactId>
++            <version>2.41.2</version>
++        </dependency>
++
+         <dependency>
+             <groupId>org.apache.poi</groupId>
+             <artifactId>poi</artifactId>
+@@ -117,16 +124,7 @@
+                             <!-- mvn clean test -DsuiteXmlFile="regression.xml"-->
+                             <!--suppress UnresolvedMavenProperty -->
+ <!--                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
+-
+-                            <suiteXmlFile>signup_and_checkout_ui.xml</suiteXmlFile>
+-                            <suiteXmlFile>signup_and_login_api_ui.xml</suiteXmlFile>
+-                            <suiteXmlFile>signup_and_login_ui_bbd.xml</suiteXmlFile>
+-                            <suiteXmlFile>login_and_checkout_ui.xml</suiteXmlFile>
+-
+-                            <suiteXmlFile>product_ui_bdd.xml</suiteXmlFile>
+-                            <suiteXmlFile>productApi.xml</suiteXmlFile>
+-                            <suiteXmlFile>cart_ui.xml</suiteXmlFile>
+-
++                            <suiteXmlFile>test_suit.xml</suiteXmlFile>
+                         </suiteXmlFiles>
+                     </configuration>
+                 </plugin>
+Index: main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@login\r\nFeature: Invalid user login\r\n\r\n  Scenario Outline: Login with invalid credentials\r\n    Given User data initialised\r\n    And User is on Home page\r\n    And User click SignupLogin\r\n    And User enter invalid Email \"<email>\"\r\n    And User enter invalid Password \"<password>\"\r\n    When User click Login\r\n    Then I should see on Error message\r\n\r\n    Examples:\r\n      | email             | password |\r\n      | ivalid@exaple.com | 1111     |\r\n      | @exaple.com       | 2222     |\r\n      | ivalidexaple.com  | 2222     |
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature b/main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature
+--- a/main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature	
++++ b/main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature	
+@@ -11,7 +11,7 @@
+     Then I should see on Error message
+ 
+     Examples:
+-      | email             | password |
+-      | ivalid@exaple.com | 1111     |
+-      | @exaple.com       | 2222     |
+-      | ivalidexaple.com  | 2222     |
+\ No newline at end of file
++      | email                | password |
++      | ivalid@exaple.com    | 1111     |
++      | 0000@exaple.com      | 2222     |
++      | asd@ivalidexaple.com | 3333     |
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_mongodb_bson_3_0_4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_mongodb_bson_3_0_4.xml b/.idea/libraries/Maven__org_mongodb_bson_3_0_4.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_mongodb_bson_3_0_4.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.mongodb:bson:3.0.4">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/bson/3.0.4/bson-3.0.4.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/bson/3.0.4/bson-3.0.4-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/bson/3.0.4/bson-3.0.4-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: main/main.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule=\"true\" type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" LANGUAGE_LEVEL=\"JDK_1_8\">\r\n    <output url=\"file://$MODULE_DIR$/target/classes\" />\r\n    <output-test url=\"file://$MODULE_DIR$/target/test-classes\" />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src/test/java\" isTestSource=\"true\" />\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src/test/resources\" type=\"java-test-resource\" />\r\n      <excludeFolder url=\"file://$MODULE_DIR$/target\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.poi:poi:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: commons-codec:commons-codec:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.commons:commons-collections4:4.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.commons:commons-math3:3.6.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.zaxxer:SparseBitSet:1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.poi:poi-ooxml:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.poi:poi-ooxml-schemas:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlbeans:xmlbeans:3.1.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.commons:commons-compress:1.19\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.github.virtuald:curvesapi:1.06\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.cucumber:cucumber-java:6.10.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.cucumber:cucumber-core:6.10.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.cucumber:cucumber-gherkin:6.10.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.cucumber:cucumber-gherkin-messages:6.10.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.cucumber:messages:15.0.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.cucumber:tag-expressions:3.0.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.cucumber:cucumber-expressions:10.3.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.cucumber:datatable:3.5.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.cucumber:cucumber-plugin:6.10.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.cucumber:docstring:6.10.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.cucumber:html-formatter:13.0.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.cucumber:create-meta:4.0.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apiguardian:apiguardian-api:1.1.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-java:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-api:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-chrome-driver:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.auto.service:auto-service-annotations:1.0.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.auto.service:auto-service:1.0.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.auto:auto-common:1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.guava:guava:31.0.1-jre\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.guava:failureaccess:1.0.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.code.findbugs:jsr305:3.0.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.checkerframework:checker-qual:3.12.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.errorprone:error_prone_annotations:2.7.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.j2objc:j2objc-annotations:1.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-chromium-driver:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-json:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-devtools-v85:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-devtools-v95:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-devtools-v96:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-devtools-v97:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-edge-driver:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-firefox-driver:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-firefox-xpi-driver:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-ie-driver:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-opera-driver:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-remote-driver:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-buffer:4.1.73.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-codec-http:4.1.73.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-codec:4.1.73.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-handler:4.1.73.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-tcnative-classes:2.0.46.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-common:4.1.73.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-transport-classes-epoll:4.1.73.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-transport-classes-kqueue:4.1.73.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-transport-native-epoll:4.1.73.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-transport-native-kqueue:4.1.73.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-transport-native-unix-common:4.1.73.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-transport:4.1.73.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-resolver:4.1.73.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.opentelemetry:opentelemetry-api:1.10.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.opentelemetry:opentelemetry-context:1.10.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.opentelemetry:opentelemetry-exporter-logging:1.10.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.opentelemetry:opentelemetry-sdk-metrics:1.10.1-alpha\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.opentelemetry:opentelemetry-sdk-logs:1.10.1-alpha\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.opentelemetry:opentelemetry-sdk-common:1.10.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi:1.10.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.opentelemetry:opentelemetry-sdk-extension-autoconfigure:1.10.1-alpha\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.opentelemetry:opentelemetry-sdk-trace:1.10.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.opentelemetry:opentelemetry-sdk:1.10.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.opentelemetry:opentelemetry-semconv:1.10.1-alpha\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.ous:jtoml:2.0.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: net.bytebuddy:byte-buddy:1.12.7\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.commons:commons-exec:1.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.asynchttpclient:async-http-client:2.12.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.asynchttpclient:async-http-client-netty-utils:2.12.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-codec-socks:4.1.60.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-handler-proxy:4.1.60.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.60.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.netty:netty-transport-native-kqueue:osx-x86_64:4.1.60.Final\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.reactivestreams:reactive-streams:1.0.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.typesafe.netty:netty-reactive-streams:2.0.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.slf4j:slf4j-api:1.7.30\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.sun.activation:jakarta.activation:1.2.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-http:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: net.jodah:failsafe:2.4.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-safari-driver:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.seleniumhq.selenium:selenium-support:4.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.testng:testng:7.4.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.beust:jcommander:1.78\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.webjars:jquery:3.5.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: io.cucumber:cucumber-testng:6.10.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.hamcrest:hamcrest:2.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: io.rest-assured:rest-assured:4.3.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.codehaus.groovy:groovy:3.0.7\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.codehaus.groovy:groovy-xml:3.0.7\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.apache.httpcomponents:httpclient:4.5.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.apache.httpcomponents:httpcore:4.4.6\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: commons-logging:commons-logging:1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.apache.httpcomponents:httpmime:4.5.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.ccil.cowan.tagsoup:tagsoup:1.2.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: io.rest-assured:json-path:4.3.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.codehaus.groovy:groovy-json:3.0.7\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: io.rest-assured:rest-assured-common:4.3.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: io.rest-assured:xml-path:4.3.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.apache.commons:commons-lang3:3.11\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: jakarta.activation:jakarta.activation-api:1.2.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: com.sun.xml.bind:jaxb-impl:2.3.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.fasterxml.jackson.core:jackson-databind:2.13.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.fasterxml.jackson.core:jackson-core:2.13.1\" level=\"project\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/main.iml b/main/main.iml
+--- a/main/main.iml	
++++ b/main/main.iml	
+@@ -10,6 +10,13 @@
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="Maven: com.relevantcodes:extentreports:2.41.2" level="project" />
++    <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.8.3" level="project" />
++    <orderEntry type="library" name="Maven: org.xerial:sqlite-jdbc:3.8.11.1" level="project" />
++    <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.23" level="project" />
++    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver:3.0.4" level="project" />
++    <orderEntry type="library" name="Maven: org.mongodb:bson:3.0.4" level="project" />
++    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver-core:3.0.4" level="project" />
+     <orderEntry type="library" name="Maven: org.apache.poi:poi:4.1.2" level="project" />
+     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.13" level="project" />
+     <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.4" level="project" />
+Index: .idea/libraries/Maven__org_jsoup_jsoup_1_8_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_jsoup_jsoup_1_8_3.xml b/.idea/libraries/Maven__org_jsoup_jsoup_1_8_3.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_jsoup_jsoup_1_8_3.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.jsoup:jsoup:1.8.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.8.3/jsoup-1.8.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.8.3/jsoup-1.8.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.8.3/jsoup-1.8.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_freemarker_freemarker_2_3_23.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_freemarker_freemarker_2_3_23.xml b/.idea/libraries/Maven__org_freemarker_freemarker_2_3_23.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_freemarker_freemarker_2_3_23.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.freemarker:freemarker:2.3.23">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/freemarker/freemarker/2.3.23/freemarker-2.3.23-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/freemarker/freemarker/2.3.23/freemarker-2.3.23-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_relevantcodes_extentreports_2_41_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__com_relevantcodes_extentreports_2_41_2.xml b/.idea/libraries/Maven__com_relevantcodes_extentreports_2_41_2.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__com_relevantcodes_extentreports_2_41_2.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.relevantcodes:extentreports:2.41.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_xerial_sqlite_jdbc_3_8_11_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_8_11_1.xml b/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_8_11_1.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_8_11_1.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.xerial:sqlite-jdbc:3.8.11.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.8.11.1/sqlite-jdbc-3.8.11.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.8.11.1/sqlite-jdbc-3.8.11.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.8.11.1/sqlite-jdbc-3.8.11.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_0_4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_0_4.xml b/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_0_4.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_0_4.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.mongodb:mongodb-driver-core:3.0.4">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.0.4/mongodb-driver-core-3.0.4.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.0.4/mongodb-driver-core-3.0.4-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.0.4/mongodb-driver-core-3.0.4-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_mongodb_mongodb_driver_3_0_4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_0_4.xml b/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_0_4.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_0_4.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.mongodb:mongodb-driver:3.0.4">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver/3.0.4/mongodb-driver-3.0.4.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver/3.0.4/mongodb-driver-3.0.4-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver/3.0.4/mongodb-driver-3.0.4-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file

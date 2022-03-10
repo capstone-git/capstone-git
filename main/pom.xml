@@ -14,6 +14,13 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+        <dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.41.2</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
@@ -118,14 +125,7 @@
                             <!--suppress UnresolvedMavenProperty -->
 <!--                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
 
-                            <suiteXmlFile>signup_and_checkout_ui.xml</suiteXmlFile>
-                            <suiteXmlFile>signup_and_login_api_ui.xml</suiteXmlFile>
-                            <suiteXmlFile>signup_and_login_ui_bbd.xml</suiteXmlFile>
-                            <suiteXmlFile>login_and_checkout_ui.xml</suiteXmlFile>
-
-                            <suiteXmlFile>product_ui_bdd.xml</suiteXmlFile>
-                            <suiteXmlFile>productApi.xml</suiteXmlFile>
-                            <suiteXmlFile>cart_ui.xml</suiteXmlFile>
+                            <suiteXmlFile>test_suit.xml</suiteXmlFile>
 
                         </suiteXmlFiles>
                     </configuration>
