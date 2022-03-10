@@ -1,0 +1,19 @@
+<?xml version = "1.0"encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "parallel_suit.xml" >
+
+    <listeners>
+        <listener class-name="ui.objects.ExtentReportListener" />
+    </listeners>
+
+  <suite-files>
+      <suite-file path="signup_and_checkout_ui.xml"/>
+      <suite-file path="signup_and_login_api_ui.xml"/>
+      <suite-file path="signup_and_login_ui_bbd.xml"/>
+      <suite-file path="login_and_checkout_ui.xml"/>
+
+      <suite-file path="product_ui_bdd.xml"/>
+      <suite-file path="productApi.xml"/>
+      <suite-file path="cart_ui.xml"/>
+  </suite-files>
+</suite>

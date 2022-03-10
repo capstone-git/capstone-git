@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ca46f05-766c-41a8-9e81-3f749fc345c3" name="Changes" comment="Routed to another method">
+    <list default="true" id="9ca46f05-766c-41a8-9e81-3f749fc345c3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_7_2022_7_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_7_2022_7_35_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2022_8_36_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2022_8_36_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/login_and_checkout_ui.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/login_and_checkout_ui.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/signup_and_checkout_ui.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/signup_and_checkout_ui.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/signup_and_login_api_ui.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/signup_and_login_api_ui.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/signup_and_login_ui_bbd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/signup_and_login_ui_bbd.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/test/java/ui/objects/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/java/ui/objects/Pages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/test/java/ui/objects/UserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/java/ui/objects/UserForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/resources/steps/ui/login/Login_user_with_invalid_credentials.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/test/resources/steps/ui/login/Logout_user.feature" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/resources/steps/ui/login/Logout_user.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/test/resources/xlsx/users.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/resources/xlsx/users.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="oleksandr_contact_form_home_cart_subscriptions_ui" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -125,12 +122,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="TestNG.C:/Users/oleksandr.c.BRILLIO/IdeaProjects/capstone-main/main/signup_and_login_ui_bbd.xml" />
+      <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/login_and_checkout_ui.xml" />
+      <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_checkout_ui.xml" />
+      <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/productApi.xml" />
+      <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_login_api_ui.xml" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/login_and_checkout_ui.xml" />
-        <item itemvalue="TestNG.C:/Users/oleksandr.c.BRILLIO/IdeaProjects/capstone-main/main/signup_and_login_ui_bbd.xml" />
         <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_login_api_ui.xml" />
         <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/signup_and_checkout_ui.xml" />
+        <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/login_and_checkout_ui.xml" />
+        <item itemvalue="TestNG.C:/Users/oleksandr.c.BRILLIO/IdeaProjects/capstone-main/main/signup_and_login_ui_bbd.xml" />
         <item itemvalue="TestNG.C:/Users/rogelio.aguilar/IdeaProjects/capstone/main/productApi.xml" />
       </list>
     </recent_temporary>
