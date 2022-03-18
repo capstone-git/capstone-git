@@ -2,7 +2,7 @@
 Feature: New User Signup
   BDD + DDT
 
-  Scenario Outline: Signup with valid credentials
+  Scenario: Signup with valid credentials
     Given User data initialised
     And User is on Home page
     And User click SignupLogin
@@ -24,9 +24,3 @@ Feature: New User Signup
     And Enter mobile
     And Click on Create Account button
     Then User should be on Account page
-
-    Examples:
-      | id
-      | 1
-      | 2
-      | 3

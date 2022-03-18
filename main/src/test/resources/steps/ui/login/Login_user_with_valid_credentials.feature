@@ -2,7 +2,7 @@
 Feature: Exist user login
   BDD + DDT
 
-  Scenario Outline: Login with valid credentials
+  Scenario: Login with valid credentials
     Given User data initialised
     And User is on Home page
     And User click SignupLogin
@@ -10,9 +10,3 @@ Feature: Exist user login
     And User enter valid password
     When User click Login
     Then User should see valid user name
-
-    Examples:
-      | id
-      | 1
-      | 2
-      | 3
