@@ -11,13 +11,7 @@ Feature: Logout user
     When User click Login
     Then User should see valid user name
 
-  Scenario Outline: Logout user
+  Scenario: Logout user
     Given User is on Home page
     When User click Logout
     Then User should be on Login page
-
-    Examples:
-      | id
-      | 1
-      | 2
-      | 3

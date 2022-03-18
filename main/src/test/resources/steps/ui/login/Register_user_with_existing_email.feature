@@ -1,7 +1,7 @@
 @login
 Feature: Exist user registration
 
-  Scenario Outline: Register exist user
+  Scenario: Register exist user
     Given User data initialised
     And User is on Home page
     And User click SignupLogin
@@ -9,9 +9,3 @@ Feature: Exist user registration
     And User enter exist email
     When User click Signup
     Then User should see Error message
-
-    Examples:
-      | id
-      | 1
-      | 2
-      | 3

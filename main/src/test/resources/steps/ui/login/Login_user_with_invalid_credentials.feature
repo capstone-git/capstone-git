@@ -13,5 +13,3 @@ Feature: Invalid user login
     Examples:
       | email             | password |
       | ivalid@exaple.com | 1111     |
-      | ______@exaple.com | 2222     |
-      | $$$$$$@exaple.com | 2222     |
