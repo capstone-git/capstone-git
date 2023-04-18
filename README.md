@@ -8,4 +8,5 @@ Created a Test Plan and Test Cases for the website
 Developed Testing Automation Framework and Test Scripts using Page Object Model and BDD testing desing patterns
 
 Frontend Automation Testing Tools: Java, Selenium, JavaScript, Cucumber, WebDriverIO, TestNG, ApachePOI
+
 Backend API Testing Tools: Java, Rest-Assured, TestNG
